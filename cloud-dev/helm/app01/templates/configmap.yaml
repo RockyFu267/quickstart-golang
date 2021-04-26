@@ -7,6 +7,7 @@ metadata:
 {{ include "mychart.app" . | indent 4}}
 data:
   myvalue: "Hello World"
+  dessert: {{ .Values.subchat01.dessert}}
   {{- $relname := .Release.Name -}}
   {{- with .Values.favorite }}
   # drink: {{ .drink | default "tea" | quote}}
